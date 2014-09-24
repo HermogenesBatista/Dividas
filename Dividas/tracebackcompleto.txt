@@ -1,0 +1,795 @@
+UnicodeDecodeError at /admin/Cartoes/cartao/1/
+'ascii' codec can't decode byte 0xc3 in position 71: ordinal not in range(128)
+Request Method:	POST
+Request URL:	http://localhost:8000/admin/Cartoes/cartao/1/
+Django Version:	1.7
+Exception Type:	UnicodeDecodeError
+Exception Value:	
+'ascii' codec can't decode byte 0xc3 in position 71: ordinal not in range(128)
+Exception Location:	C:\VenvDjango\lib\site-packages\django\db\backends\utils.py in execute, line 90
+Python Executable:	C:\VenvDjango\Scripts\python.exe
+Python Version:	2.7.6
+Python Path:	
+['C:\\VenvDjango\\Scripts\\Dividas',
+ 'C:\\Windows\\system32\\python27.zip',
+ 'C:\\VenvDjango\\DLLs',
+ 'C:\\VenvDjango\\lib',
+ 'C:\\VenvDjango\\lib\\plat-win',
+ 'C:\\VenvDjango\\lib\\lib-tk',
+ 'C:\\VenvDjango\\Scripts',
+ 'C:\\Python27\\Lib',
+ 'C:\\Python27\\DLLs',
+ 'C:\\Python27\\Lib\\lib-tk',
+ 'C:\\VenvDjango',
+ 'C:\\VenvDjango\\lib\\site-packages']
+Server time:	Ter, 23 Set 2014 22:56:52 -0300
+Unicode error hint
+
+The string that could not be encoded/decoded was: de Sa��de d
+Traceback Switch to copy-and-paste view
+
+C:\VenvDjango\lib\site-packages\django\core\handlers\base.py in get_response
+                    response = wrapped_callback(request, *callback_args, **callback_kwargs) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\contrib\admin\options.py in wrapper
+                return self.admin_site.admin_view(view)(*args, **kwargs) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\utils\decorators.py in _wrapped_view
+                    response = view_func(request, *args, **kwargs) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\views\decorators\cache.py in _wrapped_view_func
+        response = view_func(request, *args, **kwargs) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\contrib\admin\sites.py in inner
+            return view(request, *args, **kwargs) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\contrib\admin\options.py in change_view
+        return self.changeform_view(request, object_id, form_url, extra_context) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\utils\decorators.py in _wrapper
+            return bound_func(*args, **kwargs) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\utils\decorators.py in _wrapped_view
+                    response = view_func(request, *args, **kwargs) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\utils\decorators.py in bound_func
+                return func.__get__(self, type(self))(*args2, **kwargs2) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\db\transaction.py in inner
+                return func(*args, **kwargs) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\contrib\admin\options.py in changeform_view
+                self.save_related(request, form, formsets, not add) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\contrib\admin\options.py in save_related
+            self.save_formset(request, form, formset, change=change) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\contrib\admin\options.py in save_formset
+        formset.save() ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\forms\models.py in save
+        return self.save_existing_objects(commit) + self.save_new_objects(commit) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\forms\models.py in save_existing_objects
+                saved_instances.append(self.save_existing(form, obj, commit=commit)) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\forms\models.py in save_existing
+        return form.save(commit=commit) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\forms\models.py in save
+                             construct=False) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\forms\models.py in save_instance
+        instance.save() ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\db\models\base.py in save
+                       force_update=force_update, update_fields=update_fields) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\db\models\base.py in save_base
+            updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\db\models\base.py in _save_table
+                                      forced_update) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\db\models\base.py in _do_update
+        return filtered._update(values) > 0 ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\db\models\query.py in _update
+        return query.get_compiler(self.db).execute_sql(CURSOR) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\db\models\sql\compiler.py in execute_sql
+        cursor = super(SQLUpdateCompiler, self).execute_sql(result_type) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\db\models\sql\compiler.py in execute_sql
+            cursor.execute(sql, params) ...
+▶ Local vars
+C:\VenvDjango\lib\site-packages\django\db\backends\utils.py in execute
+            logger.debug('(%.3f) %s; args=%s' % (duration, sql, params), ...
+▶ Local vars
+Request information
+
+GET
+No GET data
+POST
+Variable	Value
+compra_set-1-situacao	
+u'on'
+compra_set-2-id	
+u''
+compra_set-0-cartao	
+u'1'
+compra_set-INITIAL_FORMS	
+u'1'
+compra_set-2-datacompra	
+u''
+compra_set-1-datacompra	
+u''
+vencimento	
+u'1'
+compra_set-2-valor	
+u'5'
+compra_set-3-situacao	
+u'on'
+_continue	
+u'Salvar e continuar editando'
+compra_set-3-datacompra	
+u''
+compra_set-3-qtparcelas	
+u'1'
+compra_set-0-situacao	
+u'on'
+nome	
+u'Caixa'
+compra_set-TOTAL_FORMS	
+u'4'
+compra_set-0-valor	
+u'92.11'
+compra_set-__prefix__-valor	
+u'5'
+compra_set-__prefix__-datacompra	
+u''
+compra_set-0-datacompra	
+u'05/05/2014'
+compra_set-3-descricao	
+u''
+compra_set-0-id	
+u'3'
+compra_set-1-id	
+u''
+compra_set-2-situacao	
+u'on'
+bandeira	
+u'1'
+compra_set-MIN_NUM_FORMS	
+u'0'
+compra_set-__prefix__-situacao	
+u'on'
+compra_set-__prefix__-qtparcelas	
+u'1'
+compra_set-2-cartao	
+u'1'
+situacao	
+u'on'
+compra_set-0-descricao	
+u'Plano de Sa\xfade do Arthur'
+compra_set-3-valor	
+u'5'
+compra_set-3-cartao	
+u'1'
+compra_set-__prefix__-descricao	
+u''
+csrfmiddlewaretoken	
+u'GMbUWyN8830vldoCnPcCa4Owuslt43mS'
+compra_set-__prefix__-id	
+u''
+compra_set-2-qtparcelas	
+u'1'
+compra_set-__prefix__-cartao	
+u'1'
+compra_set-2-descricao	
+u''
+compra_set-1-valor	
+u'5'
+compra_set-1-cartao	
+u'1'
+compra_set-1-qtparcelas	
+u'1'
+compra_set-MAX_NUM_FORMS	
+u'1000'
+limite	
+u'1600.0'
+compra_set-0-qtparcelas	
+u'99'
+compra_set-1-descricao	
+u''
+compra_set-3-id	
+u''
+validade	
+u'03/2017'
+FILES
+No FILES data
+COOKIES
+Variable	Value
+csrftoken	
+'GMbUWyN8830vldoCnPcCa4Owuslt43mS'
+sessionid	
+'1sq0wei0xwp0w16yvdvp6y3r0kaio95u'
+META
+Variable	Value
+TMP	
+'C:\\Users\\Moginho\\AppData\\Local\\Temp'
+COMPUTERNAME	
+'MOGINHO-PC'
+wsgi.multiprocess	
+False
+_OLD_VIRTUAL_PATH	
+'C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\Windows Live;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\MySQL\\MySQL Server 5.5\\bin;c:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\VSShell\\Common7\\IDE\\;c:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Internet Explorer;C:\\Program Files\\Windows Imaging\\;C:\\Program Files (x86)\\MySQL\\MySQL Utilities 1.3.6\\;C:\\Program Files (x86)\\Lua\\5.1;C:\\Program Files (x86)\\Lua\\5.1\\clibs;C:\\Program Files\\VDownloader;C:\\Program Files\\MongoDB 2.6 Standard\\bin;C:\\Program Files\\cURL\\bin;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files\\Java\\jdk1.7.0_10\\bin; C:\\Python33;C:\\Users\\Moginho\\Desktop\\adt-bundle-windows-x86\\sdk\\platform-tools'
+HTTP_REFERER	
+'http://localhost:8000/admin/Cartoes/cartao/1/'
+USERDOMAIN	
+'Moginho-PC'
+wsgi.multithread	
+True
+SERVER_PROTOCOL	
+'HTTP/1.1'
+SERVER_SOFTWARE	
+'WSGIServer/0.1 Python/2.7.6'
+PSMODULEPATH	
+'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+SCRIPT_NAME	
+u''
+COMMONPROGRAMFILES	
+'C:\\Program Files (x86)\\Common Files'
+PROCESSOR_IDENTIFIER	
+'Intel64 Family 6 Model 37 Stepping 2, GenuineIntel'
+REQUEST_METHOD	
+'POST'
+PROGRAMFILES	
+'C:\\Program Files (x86)'
+PROCESSOR_REVISION	
+'2502'
+PATH	
+'C:\\VenvDjango\\Scripts;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\Windows Live;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\MySQL\\MySQL Server 5.5\\bin;c:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\VSShell\\Common7\\IDE\\;c:\\Program Files (x86)\\Microsoft SQL Server\\100\\Tools\\Binn\\;c:\\Program Files (x86)\\Microsoft SQL Server\\100\\DTS\\Binn\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Internet Explorer;C:\\Program Files\\Windows Imaging\\;C:\\Program Files (x86)\\MySQL\\MySQL Utilities 1.3.6\\;C:\\Program Files (x86)\\Lua\\5.1;C:\\Program Files (x86)\\Lua\\5.1\\clibs;C:\\Program Files\\VDownloader;C:\\Program Files\\MongoDB 2.6 Standard\\bin;C:\\Program Files\\cURL\\bin;C:\\Python27\\;C:\\Python27\\Scripts;C:\\Program Files\\Java\\jdk1.7.0_10\\bin; C:\\Python33;C:\\Users\\Moginho\\Desktop\\adt-bundle-windows-x86\\sdk\\platform-tools'
+QUERY_STRING	
+''
+SYSTEMROOT	
+'C:\\Windows'
+HTTP_ORIGIN	
+'http://localhost:8000'
+PROGRAMFILES(X86)	
+'C:\\Program Files (x86)'
+RUN_MAIN	
+'true'
+CONTENT_LENGTH	
+'5221'
+VBOX_INSTALL_PATH	
+'C:\\Program Files\\Oracle\\VirtualBox\\'
+VIRTUAL_ENV	
+'C:\\VenvDjango'
+HTTP_CACHE_CONTROL	
+'max-age=0'
+HTTP_CONNECTION	
+'keep-alive'
+HTTP_COOKIE	
+'sessionid=1sq0wei0xwp0w16yvdvp6y3r0kaio95u; csrftoken=GMbUWyN8830vldoCnPcCa4Owuslt43mS'
+WINDOWS_TRACING_LOGFILE	
+'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+REMOTE_ADDR	
+'127.0.0.1'
+COMMONPROGRAMFILES(X86)	
+'C:\\Program Files (x86)\\Common Files'
+PROCESSOR_ARCHITECTURE	
+'x86'
+wsgi.url_scheme	
+'http'
+ALLUSERSPROFILE	
+'C:\\ProgramData'
+SERVER_PORT	
+'8000'
+LOCALAPPDATA	
+'C:\\Users\\Moginho\\AppData\\Local'
+HOMEPATH	
+'\\Users\\Moginho'
+PROCESSOR_LEVEL	
+'6'
+PT5HOME	
+'C:\\Program Files (x86)\\Cisco Packet Tracer 6.0.1'
+LUA_PATH	
+';;C:\\Program Files (x86)\\Lua\\5.1\\lua\\?.luac'
+PROGRAMW6432	
+'C:\\Program Files'
+USERNAME	
+'Moginho'
+HTTP_ACCEPT	
+'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+LOGONSERVER	
+'\\\\MOGINHO-PC'
+PROMPT	
+'(VenvDjango) $P$G'
+WINDOWS_TRACING_FLAGS	
+'3'
+PROGRAMDATA	
+'C:\\ProgramData'
+PT6HOME	
+'C:\\Program Files (x86)\\Cisco Packet Tracer 6.0.1'
+PATH_INFO	
+u'/admin/Cartoes/cartao/1/'
+ESET_OPTIONS	
+'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               '
+CSRF_COOKIE	
+u'GMbUWyN8830vldoCnPcCa4Owuslt43mS'
+wsgi.input	
+<socket._fileobject object at 0x046304B0>
+HTTP_USER_AGENT	
+'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.120 Safari/537.36'
+HTTP_HOST	
+'localhost:8000'
+SESSIONNAME	
+'Console'
+PATHEXT	
+'.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.wlua;.lexe;.PY'
+CONFIGSETROOT	
+'C:\\Windows\\ConfigSetRoot'
+MOZ_PLUGIN_PATH	
+'C:\\Program Files (x86)\\Foxit Software\\Foxit Reader\\plugins\\'
+FP_NO_HOST_CHECK	
+'NO'
+WINDIR	
+'C:\\Windows'
+wsgi.file_wrapper	
+''
+HTTP_ACCEPT_ENCODING	
+'gzip,deflate'
+wsgi.version	
+(1, 0)
+TEMP	
+'C:\\Users\\Moginho\\AppData\\Local\\Temp'
+HOMEDRIVE	
+'C:'
+SERVER_NAME	
+'Moginho-PC'
+wsgi.run_once	
+False
+REMOTE_HOST	
+''
+SYSTEMDRIVE	
+'C:'
+GATEWAY_INTERFACE	
+'CGI/1.1'
+HTTP_ACCEPT_LANGUAGE	
+'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+COMSPEC	
+'C:\\Windows\\system32\\cmd.exe'
+NUMBER_OF_PROCESSORS	
+'4'
+_OLD_VIRTUAL_PROMPT	
+'$P$G'
+APPDATA	
+'C:\\Users\\Moginho\\AppData\\Roaming'
+DJANGO_SETTINGS_MODULE	
+'Dividas.settings'
+CONTENT_TYPE	
+'multipart/form-data; boundary=----WebKitFormBoundarywqK4cfS5TcZnX3Qa'
+PROCESSOR_ARCHITEW6432	
+'AMD64'
+LUA_DEV	
+'C:\\Program Files (x86)\\Lua\\5.1'
+wsgi.errors	
+<open file '<stderr>', mode 'w' at 0x004960D0>
+COMMONPROGRAMW6432	
+'C:\\Program Files\\Common Files'
+OS	
+'Windows_NT'
+PUBLIC	
+'C:\\Users\\Public'
+USERPROFILE	
+'C:\\Users\\Moginho'
+Settings
+Using settings module Dividas.settings
+Setting	Value
+USE_L10N	
+True
+USE_THOUSAND_SEPARATOR	
+False
+CSRF_COOKIE_SECURE	
+False
+LANGUAGE_CODE	
+'pt-br'
+ROOT_URLCONF	
+'Dividas.urls'
+MANAGERS	
+()
+BASE_DIR	
+'C:\\VenvDjango\\Scripts\\Dividas'
+TEST_NON_SERIALIZED_APPS	
+[]
+DEFAULT_CHARSET	
+'utf-8'
+SESSION_SERIALIZER	
+'django.contrib.sessions.serializers.JSONSerializer'
+STATIC_ROOT	
+None
+ALLOWED_HOSTS	
+[]
+MESSAGE_STORAGE	
+'django.contrib.messages.storage.fallback.FallbackStorage'
+EMAIL_SUBJECT_PREFIX	
+'[Django] '
+SEND_BROKEN_LINK_EMAILS	
+False
+STATICFILES_FINDERS	
+('django.contrib.staticfiles.finders.FileSystemFinder',
+ 'django.contrib.staticfiles.finders.AppDirectoriesFinder')
+SESSION_CACHE_ALIAS	
+'default'
+SESSION_COOKIE_DOMAIN	
+None
+SESSION_COOKIE_NAME	
+'sessionid'
+ADMIN_FOR	
+()
+TIME_INPUT_FORMATS	
+('%H:%M:%S', '%H:%M:%S.%f', '%H:%M')
+DATABASES	
+{'default': {'ATOMIC_REQUESTS': False,
+             'AUTOCOMMIT': True,
+             'CONN_MAX_AGE': 0,
+             'ENGINE': 'mysql.connector.django',
+             'HOST': '127.0.0.1',
+             'NAME': 'dividas',
+             'OPTIONS': {},
+             'PASSWORD': u'********************',
+             'PORT': '3307',
+             'TEST': {'CHARSET': None,
+                      'COLLATION': None,
+                      'MIRROR': None,
+                      'NAME': None},
+             'TIME_ZONE': 'America/Fortaleza',
+             'USER': 'root'}}
+FILE_UPLOAD_DIRECTORY_PERMISSIONS	
+None
+FILE_UPLOAD_PERMISSIONS	
+None
+FILE_UPLOAD_HANDLERS	
+('django.core.files.uploadhandler.MemoryFileUploadHandler',
+ 'django.core.files.uploadhandler.TemporaryFileUploadHandler')
+DEFAULT_CONTENT_TYPE	
+'text/html'
+APPEND_SLASH	
+True
+LOCALE_PATHS	
+()
+DATABASE_ROUTERS	
+[]
+DEFAULT_TABLESPACE	
+''
+YEAR_MONTH_FORMAT	
+'F Y'
+STATICFILES_STORAGE	
+'django.contrib.staticfiles.storage.StaticFilesStorage'
+CACHES	
+{'default': {'BACKEND': 'django.core.cache.backends.locmem.LocMemCache'}}
+SERVER_EMAIL	
+'root@localhost'
+SESSION_COOKIE_PATH	
+'/'
+SILENCED_SYSTEM_CHECKS	
+[]
+MIDDLEWARE_CLASSES	
+('django.contrib.sessions.middleware.SessionMiddleware',
+ 'django.middleware.common.CommonMiddleware',
+ 'django.middleware.csrf.CsrfViewMiddleware',
+ 'django.contrib.auth.middleware.AuthenticationMiddleware',
+ 'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+ 'django.contrib.messages.middleware.MessageMiddleware',
+ 'django.middleware.clickjacking.XFrameOptionsMiddleware')
+USE_I18N	
+True
+THOUSAND_SEPARATOR	
+','
+SECRET_KEY	
+u'********************'
+LANGUAGE_COOKIE_NAME	
+'django_language'
+DEFAULT_INDEX_TABLESPACE	
+''
+TRANSACTIONS_MANAGED	
+False
+LOGGING_CONFIG	
+'logging.config.dictConfig'
+TEMPLATE_LOADERS	
+('django.template.loaders.filesystem.Loader',
+ 'django.template.loaders.app_directories.Loader')
+FIRST_DAY_OF_WEEK	
+0
+WSGI_APPLICATION	
+'Dividas.wsgi.application'
+TEMPLATE_DEBUG	
+True
+X_FRAME_OPTIONS	
+'SAMEORIGIN'
+CSRF_COOKIE_NAME	
+'csrftoken'
+FORCE_SCRIPT_NAME	
+None
+USE_X_FORWARDED_HOST	
+False
+SIGNING_BACKEND	
+'django.core.signing.TimestampSigner'
+SESSION_COOKIE_SECURE	
+False
+CSRF_COOKIE_DOMAIN	
+None
+FILE_CHARSET	
+'utf-8'
+DEBUG	
+True
+LANGUAGE_COOKIE_DOMAIN	
+None
+DEFAULT_FILE_STORAGE	
+'django.core.files.storage.FileSystemStorage'
+INSTALLED_APPS	
+('django.contrib.admin',
+ 'django.contrib.auth',
+ 'django.contrib.contenttypes',
+ 'django.contrib.sessions',
+ 'django.contrib.messages',
+ 'django.contrib.staticfiles',
+ 'Cartoes')
+LANGUAGES	
+(('af', 'Afrikaans'),
+ ('ar', 'Arabic'),
+ ('ast', 'Asturian'),
+ ('az', 'Azerbaijani'),
+ ('bg', 'Bulgarian'),
+ ('be', 'Belarusian'),
+ ('bn', 'Bengali'),
+ ('br', 'Breton'),
+ ('bs', 'Bosnian'),
+ ('ca', 'Catalan'),
+ ('cs', 'Czech'),
+ ('cy', 'Welsh'),
+ ('da', 'Danish'),
+ ('de', 'German'),
+ ('el', 'Greek'),
+ ('en', 'English'),
+ ('en-au', 'Australian English'),
+ ('en-gb', 'British English'),
+ ('eo', 'Esperanto'),
+ ('es', 'Spanish'),
+ ('es-ar', 'Argentinian Spanish'),
+ ('es-mx', 'Mexican Spanish'),
+ ('es-ni', 'Nicaraguan Spanish'),
+ ('es-ve', 'Venezuelan Spanish'),
+ ('et', 'Estonian'),
+ ('eu', 'Basque'),
+ ('fa', 'Persian'),
+ ('fi', 'Finnish'),
+ ('fr', 'French'),
+ ('fy', 'Frisian'),
+ ('ga', 'Irish'),
+ ('gl', 'Galician'),
+ ('he', 'Hebrew'),
+ ('hi', 'Hindi'),
+ ('hr', 'Croatian'),
+ ('hu', 'Hungarian'),
+ ('ia', 'Interlingua'),
+ ('id', 'Indonesian'),
+ ('io', 'Ido'),
+ ('is', 'Icelandic'),
+ ('it', 'Italian'),
+ ('ja', 'Japanese'),
+ ('ka', 'Georgian'),
+ ('kk', 'Kazakh'),
+ ('km', 'Khmer'),
+ ('kn', 'Kannada'),
+ ('ko', 'Korean'),
+ ('lb', 'Luxembourgish'),
+ ('lt', 'Lithuanian'),
+ ('lv', 'Latvian'),
+ ('mk', 'Macedonian'),
+ ('ml', 'Malayalam'),
+ ('mn', 'Mongolian'),
+ ('mr', 'Marathi'),
+ ('my', 'Burmese'),
+ ('nb', 'Norwegian Bokmal'),
+ ('ne', 'Nepali'),
+ ('nl', 'Dutch'),
+ ('nn', 'Norwegian Nynorsk'),
+ ('os', 'Ossetic'),
+ ('pa', 'Punjabi'),
+ ('pl', 'Polish'),
+ ('pt', 'Portuguese'),
+ ('pt-br', 'Brazilian Portuguese'),
+ ('ro', 'Romanian'),
+ ('ru', 'Russian'),
+ ('sk', 'Slovak'),
+ ('sl', 'Slovenian'),
+ ('sq', 'Albanian'),
+ ('sr', 'Serbian'),
+ ('sr-latn', 'Serbian Latin'),
+ ('sv', 'Swedish'),
+ ('sw', 'Swahili'),
+ ('ta', 'Tamil'),
+ ('te', 'Telugu'),
+ ('th', 'Thai'),
+ ('tr', 'Turkish'),
+ ('tt', 'Tatar'),
+ ('udm', 'Udmurt'),
+ ('uk', 'Ukrainian'),
+ ('ur', 'Urdu'),
+ ('vi', 'Vietnamese'),
+ ('zh-cn', 'Simplified Chinese'),
+ ('zh-hans', 'Simplified Chinese'),
+ ('zh-hant', 'Traditional Chinese'),
+ ('zh-tw', 'Traditional Chinese'))
+COMMENTS_ALLOW_PROFANITIES	
+False
+STATICFILES_DIRS	
+()
+PREPEND_WWW	
+False
+SECURE_PROXY_SSL_HEADER	
+None
+LANGUAGE_COOKIE_AGE	
+None
+SESSION_COOKIE_HTTPONLY	
+True
+DEBUG_PROPAGATE_EXCEPTIONS	
+False
+INTERNAL_IPS	
+()
+MONTH_DAY_FORMAT	
+'F j'
+LOGIN_URL	
+'/accounts/login/'
+SESSION_EXPIRE_AT_BROWSER_CLOSE	
+False
+TIME_FORMAT	
+'P'
+AUTH_USER_MODEL	
+'auth.User'
+DATE_INPUT_FORMATS	
+('%Y-%m-%d',
+ '%m/%d/%Y',
+ '%m/%d/%y',
+ '%b %d %Y',
+ '%b %d, %Y',
+ '%d %b %Y',
+ '%d %b, %Y',
+ '%B %d %Y',
+ '%B %d, %Y',
+ '%d %B %Y',
+ '%d %B, %Y')
+AUTHENTICATION_BACKENDS	
+('django.contrib.auth.backends.ModelBackend',)
+EMAIL_HOST_PASSWORD	
+u'********************'
+PASSWORD_RESET_TIMEOUT_DAYS	
+u'********************'
+SESSION_FILE_PATH	
+None
+CACHE_MIDDLEWARE_ALIAS	
+'default'
+SESSION_SAVE_EVERY_REQUEST	
+False
+NUMBER_GROUPING	
+0
+SESSION_ENGINE	
+'django.contrib.sessions.backends.db'
+CSRF_FAILURE_VIEW	
+'django.views.csrf.csrf_failure'
+CSRF_COOKIE_PATH	
+'/'
+LOGIN_REDIRECT_URL	
+'/accounts/profile/'
+DECIMAL_SEPARATOR	
+'.'
+IGNORABLE_404_URLS	
+()
+MIGRATION_MODULES	
+{}
+TEMPLATE_STRING_IF_INVALID	
+''
+LOGOUT_URL	
+'/accounts/logout/'
+EMAIL_USE_TLS	
+False
+FIXTURE_DIRS	
+()
+EMAIL_HOST	
+'localhost'
+DATE_FORMAT	
+'N j, Y'
+MEDIA_ROOT	
+''
+DEFAULT_EXCEPTION_REPORTER_FILTER	
+'django.views.debug.SafeExceptionReporterFilter'
+ADMINS	
+()
+FORMAT_MODULE_PATH	
+None
+DEFAULT_FROM_EMAIL	
+'webmaster@localhost'
+MEDIA_URL	
+''
+DATETIME_FORMAT	
+'N j, Y, P'
+TEMPLATE_DIRS	
+['C:\\VenvDjango\\Scripts\\Dividas\\templates']
+DISALLOWED_USER_AGENTS	
+()
+ALLOWED_INCLUDE_ROOTS	
+()
+LOGGING	
+{}
+SHORT_DATE_FORMAT	
+'m/d/Y'
+TEST_RUNNER	
+'django.test.runner.DiscoverRunner'
+CACHE_MIDDLEWARE_KEY_PREFIX	
+u'********************'
+TIME_ZONE	
+'America/Fortaleza'
+FILE_UPLOAD_MAX_MEMORY_SIZE	
+2621440
+EMAIL_BACKEND	
+'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_SSL	
+False
+TEMPLATE_CONTEXT_PROCESSORS	
+('django.contrib.auth.context_processors.auth',
+ 'django.core.context_processors.debug',
+ 'django.core.context_processors.i18n',
+ 'django.core.context_processors.media',
+ 'django.core.context_processors.static',
+ 'django.core.context_processors.tz',
+ 'django.contrib.messages.context_processors.messages')
+SESSION_COOKIE_AGE	
+1209600
+SETTINGS_MODULE	
+'Dividas.settings'
+USE_ETAGS	
+False
+LANGUAGES_BIDI	
+('he', 'ar', 'fa', 'ur')
+FILE_UPLOAD_TEMP_DIR	
+None
+CSRF_COOKIE_AGE	
+31449600
+STATIC_URL	
+'/static/'
+EMAIL_PORT	
+25
+USE_TZ	
+False
+SHORT_DATETIME_FORMAT	
+'m/d/Y P'
+PASSWORD_HASHERS	
+u'********************'
+ABSOLUTE_URL_OVERRIDES	
+{}
+LANGUAGE_COOKIE_PATH	
+'/'
+CACHE_MIDDLEWARE_SECONDS	
+600
+CSRF_COOKIE_HTTPONLY	
+False
+DATETIME_INPUT_FORMATS	
+('%Y-%m-%d %H:%M:%S',
+ '%Y-%m-%d %H:%M:%S.%f',
+ '%Y-%m-%d %H:%M',
+ '%Y-%m-%d',
+ '%m/%d/%Y %H:%M:%S',
+ '%m/%d/%Y %H:%M:%S.%f',
+ '%m/%d/%Y %H:%M',
+ '%m/%d/%Y',
+ '%m/%d/%y %H:%M:%S',
+ '%m/%d/%y %H:%M:%S.%f',
+ '%m/%d/%y %H:%M',
+ '%m/%d/%y')
+EMAIL_HOST_USER	
+''
+PROFANITIES_LIST	
+u'********************'
+You're seeing this error because you have DEBUG = True in your Django settings file. Change that to False, and Django will display a standard 500 page.
