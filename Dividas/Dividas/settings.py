@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+from __future__ import absolute_import, unicode_literals
 """
 Django settings for Dividas project.
 
@@ -9,8 +11,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import, unicode_literals
+
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
