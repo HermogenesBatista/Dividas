@@ -9,8 +9,6 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import, unicode_literals
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -19,7 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'uqb618pq=yghc02f8$#7z&v(oxade4zjemvmaz9qz06!#7dgko'
+SECRET_KEY = 'uu+1wr@-fkyca0!-4r%pjiq_(ll_c9rdltl!dbkim+02k9kcp7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -55,13 +53,18 @@ ROOT_URLCONF = 'Dividas.urls'
 
 WSGI_APPLICATION = 'Dividas.wsgi.application'
 
+
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'dividas',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': '3307',
     }
 }
 
