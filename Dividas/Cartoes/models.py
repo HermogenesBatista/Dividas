@@ -8,11 +8,10 @@ from datetime import *
 
 class Bandeira(models.Model):
     nome = models.CharField(max_length=50, verbose_name=u"Texto Aqui")
-
     situacao = models.BooleanField(default=True)
 
     def __unicode__(self):
-        return u'%s' % self.nome
+        return u'{nome:s}'.format(nome=self.nome)
 
 class Cartao(models.Model):
     nome = models.CharField(max_length=50, verbose_name=u"Texto Aqui")
@@ -23,7 +22,7 @@ class Cartao(models.Model):
     situacao = models.BooleanField(default=True)
 
     def __unicode__(self):
-        return u'%s' % self.nome
+        return u'{nome:s}'.format(nome=self.nome)
 
     def bestDayBuy(self):
         self._bestday = self.vencimento - 10
@@ -78,7 +77,7 @@ class Compra(models.Model):
     situacao = models.BooleanField(default=True)
 
     def __unicode__(self):
-        return '%s dtcompra: %s' % (self.descricao, str(self.datacompra))
+        return u"{descricao:s} data da compra: {datacompra:s}".format(descricao=self.descricao, datacompra=self.datacompra)
 
     def parcelasPg(self):
         hoje = date.today()
@@ -88,4 +87,3 @@ class Compra(models.Model):
 
     def parcelasRest(self):
         return self.qtparcelas - self.parcelasPg()
-
