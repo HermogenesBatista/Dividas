@@ -7,19 +7,19 @@ from datetime import *
 # Create your models here.
 
 class Bandeira(models.Model):
-    nome = models.CharField(max_length=50, verbose_name=u"Texto Aqui")
-    situacao = models.BooleanField(default=True)
+    nome = models.CharField(max_length=50, verbose_name=u"Nome da Bandeira")
+    situacao = models.BooleanField(default=True, verbose_name=u"Situação")
 
     def __unicode__(self):
         return u'{nome:s}'.format(nome=self.nome)
 
 class Cartao(models.Model):
-    nome = models.CharField(max_length=50, verbose_name=u"Texto Aqui")
+    nome = models.CharField(max_length=50, verbose_name=u"Nome do Cartão")
     validade = models.CharField(max_length=7)
     vencimento = models.IntegerField(default=1)
     limite = models.FloatField(default=510)
     bandeira = models.ForeignKey(Bandeira, default=1)
-    situacao = models.BooleanField(default=True)
+    situacao = models.BooleanField(default=True, verbose_name=u"Situação")
 
     def __unicode__(self):
         return u'{nome:s}'.format(nome=self.nome)
@@ -63,6 +63,7 @@ class Cartao(models.Model):
     linha abaixo serve para dar uma descrição quando usar os metodos criados
     automaticamente são renomeados no Django-admin
     '''
+    #situacao.short_description = u'Situação'
     bestDayBuy.short_description = 'Melhor dia de Compra'
     proxFatura.short_description = 'Data da Prox. Fatura'
     parcialFatura.short_description = 'Parcial da Prox. Fatura'
@@ -70,11 +71,11 @@ class Cartao(models.Model):
 
 class Compra(models.Model):
     cartao = models.ForeignKey(Cartao)
-    descricao = models.CharField(max_length=50, verbose_name=u"Texto Aqui")
+    descricao = models.CharField(max_length=50, verbose_name=u"Descrição da Compra")
     valor = models.FloatField(default=5)
     qtparcelas = models.IntegerField(default=1)
     datacompra = models.DateField('Data da Compra')
-    situacao = models.BooleanField(default=True)
+    situacao = models.BooleanField(default=True, verbose_name=u"Situação")
 
     def __unicode__(self):
         return u"{descricao:s} data da compra: {datacompra:s}".format(descricao=self.descricao, datacompra=self.datacompra)
