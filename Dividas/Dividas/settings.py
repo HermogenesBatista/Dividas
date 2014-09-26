@@ -68,6 +68,8 @@ DATABASES = {
     }
 }
 
+DEFAULT_CHARACTER_SET = 'UTF-8'
+
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 # Internationalization
