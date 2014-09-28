@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% if latest_cartoes %}
+    <p>Cartões Disponíveis: </p>
+    <ul>
+    {% for cartao in latest_cartoes %}
+        <li><a href="/Cartoes/{{ cartao.id }}/resultado">{{ cartao.nome }}</a></li>
+    {% endfor %}
+        <li><a href="/Cartoes/all/resultado">Todos os Cartões</a></li>
+    </ul>
+{% else %}
+    <p>Sem Cartões disponíveis.</p>
+{% endif %}
+
+</body>
+</html>

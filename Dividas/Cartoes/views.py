@@ -2,11 +2,18 @@
 from __future__ import absolute_import, unicode_literals
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template import RequestContext, loader
 from Cartoes.models import *
 
 # Create your views here.
 def index(request):
-    return HttpResponse('Essa eh uma pagina de teste.')
+    lastest_cartoes = Cartao.objects.order_by('-nome')[:5]
+    template = loader.get_template('Cartoes/index.html')
+    context = RequestContext(request, {
+        'latest_cartoes': lastest_cartoes,
+    })
+    return HttpResponse(template.render(context))
+
 
 def resultado(request, cartao_id):
 
