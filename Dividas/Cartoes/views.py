@@ -10,8 +10,12 @@ def index(request):
 
 def resultado(request, cartao_id):
 
-    if(cartao_id == 'all'):
-        c = Cartao.objects.all()
+    if(cartao_id.isalpha()):
+        if(cartao_id == 'all'):
+            c = Cartao.objects.all()
+        else:
+            return HttpResponse('Erro na sua busca!.')
+
     else:
         c = [Cartao.objects.get(pk=cartao_id)]
 
