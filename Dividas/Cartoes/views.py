@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import absolute_import, unicode_literals
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import get_object_or_404,render
+from django.http import HttpResponse, Http404
 from django.template import RequestContext, loader
 from Cartoes.models import *
 
@@ -21,10 +21,10 @@ def resultado(request, cartao_id):
         if(cartao_id == 'all'):
             c = Cartao.objects.all()
         else:
-            return HttpResponse('Erro na sua busca!.')
+            raise Http404
 
     else:
-        c = [Cartao.objects.get(pk=cartao_id)]
+        c = get_object_or_404(Cartao, pk=cartao_id)
 
     template = loader.get_template('Cartoes/resultado.html')
     context = RequestContext(request, {
