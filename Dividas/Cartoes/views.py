@@ -26,48 +26,9 @@ def resultado(request, cartao_id):
     else:
         c = [Cartao.objects.get(pk=cartao_id)]
 
-    html = '''
-    <!DOCTYPE>
-    <html lang='pt-br'>
-    <head>
-        <meta charset='UTF-8'>
-        <title>View Test</title>
-    </head>
-    <body>
-        <table>
-            <thead>
-                <tr>
-                    <td>Nome</td>
-                    <td>Bandeira</td>
-                    <td>Validade</td>
-                    <td>Limite</td>
-                    <td>Parcial da Fatura</td>
-                    <td>Proxima Fatura</td>
-                </tr>
-            </thead>
-            <tbody>'''
+    template = loader.get_template('Cartoes/resultado.html')
+    context = RequestContext(request, {
+        'cartoes': c,
+    })
+    return HttpResponse(template.render(context))
 
-    for compra in c:
-        linharesultado = '''
-                <tr align='center'>
-                    <td>%s</td>
-                    <td>%s</td>
-                    <td>%s</td>
-                    <td>%.2f</td>
-                    <td>%.2f</td>
-                    <td>%s</td>
-                </tr>''' %(compra.nome, compra.bandeira, compra.validade, compra.limite,
-                           compra.parcialFatura(), compra.proxFatura().strftime('%d/%m/%Y'))
-
-        html += linharesultado
-
-    html +='''</tbody>
-        </table>
-
-    </body>
-    </html>
-
-    '''
-
-
-    return HttpResponse(html)

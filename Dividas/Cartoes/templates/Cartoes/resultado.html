@@ -17,8 +17,17 @@
                 </tr>
             </thead>
             <tbody>
-            {% if compras %}
-
+            {% if cartoes %}
+                {% for cartao in cartoes %}
+                <tr align='center'>
+                    <td>{{ cartao.nome }}</td>
+                    <td>{{ cartao.bandeira }}</td>
+                    <td>{{ cartao.validade }}</td>
+                    <td>{{ cartao.limite }}</td>
+                    <td>{{ cartao.parcialFatura }}</td>
+                    <td>{{ cartao.proxFatura }}</td>
+                </tr>
+                {% endfor %}
             {% endif %}
             </tbody>
         </table>
