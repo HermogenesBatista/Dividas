@@ -85,9 +85,12 @@ class Compra(models.Model):
 
     def parcelasPg(self):
         hoje = date.today()
+        add = 0
+        if(hoje.year > self.datacompra.year):
+            add = hoje.year - self.datacompra.year
         parcpg = hoje.month - self.datacompra.month
 
-        return parcpg
+        return parcpg+add*12
 
     def parcelasRest(self):
         return self.qtparcelas - self.parcelasPg()
