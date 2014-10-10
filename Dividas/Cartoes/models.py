@@ -47,8 +47,6 @@ class Cartao(models.Model):
             if(compra.datacompra < self._dtBestDay
                and compra.parcelasRest() <= compra.qtparcelas):
                 soma += compra.valor
-            else:
-                print compra
 
         return soma
 
