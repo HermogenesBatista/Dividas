@@ -44,8 +44,11 @@ class Cartao(models.Model):
 
         for compra in compras:
 
-            if(compra.datacompra < self._dtBestDay):
+            if(compra.datacompra < self._dtBestDay
+               and compra.parcelasRest() <= compra.qtparcelas):
                 soma += compra.valor
+            else:
+                print compra
 
         return soma
 
@@ -80,7 +83,7 @@ class Compra(models.Model):
     situacao = models.BooleanField(default=True, verbose_name=u"Situação")
 
     def __unicode__(self):
-        return u"{descricao:s} data da compra: {datacompra:s}".format(descricao=self.descricao, datacompra=self.datacompra)
+        return u"{descricao:s} data da compra: {datacompra:s}".format(descricao=self.descricao, datacompra=self.datacompra.strftime('%d/%m/%Y'))
 
     def parcelasPg(self):
         hoje = date.today()
