@@ -21,7 +21,7 @@ class AdminCartao(admin.ModelAdmin):
     ]
 
     inlines = [CompraInline]
-    list_display = ('nome', 'bandeira', 'validade', 'bestDayBuy', 'vencimento','proxFatura', 'parcialFatura')
+    list_display = ('nome', 'bandeira', 'validade', 'bestDayBuy', 'vencimento', 'proxFatura', 'parcialFatura')
     list_filter = ['bandeira', 'vencimento']
 
 admin.site.register(Bandeira)

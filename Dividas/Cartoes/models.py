@@ -40,9 +40,11 @@ class Cartao(models.Model):
 
         soma = 0
 
+        self.bestDayBuy()
+
         for compra in compras:
-            intervalo = self.proxFatura() - compra.datacompra
-            if(intervalo.days > 40):
+
+            if(compra.datacompra < self._dtBestDay):
                 soma += compra.valor
 
         return soma
