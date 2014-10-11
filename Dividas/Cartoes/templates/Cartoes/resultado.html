@@ -3,17 +3,27 @@
     <head>
         <meta charset='UTF-8'>
         <title>View Test</title>
+        <style type="text/css">
+            td {
+                width: 130px;
+            }
+            td.maior{
+                width: 240px;
+            }
+        </style>
     </head>
     <body>
-        <table>
+        <h1 align="center">Mostrando os Cartões</h1>
+        <br><br>
+        <table border="1" align="center">
             <thead>
-                <tr>
+                <tr align="center">
                     <td>Nome</td>
                     <td>Bandeira</td>
                     <td>Validade</td>
                     <td>Limite</td>
                     <td>Parcial da Fatura</td>
-                    <td>Proxima Fatura</td>
+                    <td class="maior">Proxima Fatura</td>
                 </tr>
             </thead>
             <tbody>
