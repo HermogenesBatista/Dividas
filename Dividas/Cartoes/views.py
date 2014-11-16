@@ -24,7 +24,7 @@ def resultado(request, cartao_id):
             raise Http404
 
     else:
-        c = get_object_or_404(Cartao, pk=cartao_id)
+        c = [get_object_or_404(Cartao, pk=cartao_id)]
 
     template = loader.get_template('Cartoes/resultado.html')
     context = RequestContext(request, {
