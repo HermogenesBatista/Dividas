@@ -76,7 +76,7 @@ class Cartao(models.Model):
 
 
 class Compra(models.Model):
-    cartao = models.ForeignKey(Cartao)
+    cartao = models.ForeignKey(Cartao, related_name='compra')
     descricao = models.CharField(max_length=50, verbose_name=u"Descrição da Compra")
     valor = models.FloatField(default=5)
     qtparcelas = models.IntegerField(default=1)

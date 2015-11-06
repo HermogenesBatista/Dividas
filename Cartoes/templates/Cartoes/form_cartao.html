@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    {% if extra  %}
+        <div style="color: blue">
+            {{ extra.msg }}
+        </div>
+    {% endif %}
+    <div>
+        <div>
+            <form action="{% url 'cartao_add' %}" method="post" role="form">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

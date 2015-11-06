@@ -9,4 +9,5 @@ from Cartoes import views
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
     url(r'(?P<cartao_id>\w+)/resultado/$', views.resultado, name='resultado'),
+    url(r'cartao_add/$', views.cartao_add, name='cartao_add'),
 )
