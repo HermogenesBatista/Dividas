@@ -59,7 +59,7 @@ WSGI_APPLICATION = 'Dividas.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dividas',
         'USER': 'root',
         'PASSWORD': '123456',
